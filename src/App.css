@@ -4,5 +4,26 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  display: flex;
+  justify-content: center;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+  width: 400px;
+}
+.unread {
+  background-color: lawngreen;
+  margin: 10px;
+  cursor: pointer;
+}
+.read {
+  background-color: transparent;
+  margin: 10px;
+  cursor: pointer;
+}
 
 

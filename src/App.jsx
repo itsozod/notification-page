@@ -6,14 +6,57 @@ import { unread } from "./Components/MainAppContainer/Unread";
 function App() {
   const [notifications, setNotifications] = useState(unread);
 
+  const markAll = () => {
+    setNotifications((prevNotification) => {
+      return prevNotification.map((notification) => {
+        if (!notification.isRead) {
+          return { ...notification, isRead: true };
+        }
+        return notification;
+      });
+    });
+  };
+
+  const removeUnread = (notificationId) => {
+    setNotifications((prevNotification) => {
+      return prevNotification.map((notification) => {
+        if (notification.id === notificationId && !notification.isRead) {
+          return { ...notification, isRead: true };
+        }
+        return notification;
+      });
+    });
+  };
+
   return (
     <>
-      <header>
-        <h3>Notification</h3>
-        <button className="mark">Mark all as read</button>
+      <header id="header">
+        <h3>
+          Notification{" "}
+          <span>
+            {
+              notifications.filter((notification) => !notification.isRead)
+                .length
+            }
+          </span>
+        </h3>
+        <button className="mark" onClick={() => markAll()}>
+          Mark all as read
+        </button>
       </header>
       <main>
-        <MainAppContainer></MainAppContainer>
+        <MainAppContainer>
+          {notifications.map((notification) => (
+            <div key={notification.id}>
+              <p
+                className={notification.isRead ? "read" : "unread"}
+                onClick={() => removeUnread(notification.id)}
+              >
+                {notification.text}
+              </p>
+            </div>
+          ))}
+        </MainAppContainer>
       </main>
     </>
   );
