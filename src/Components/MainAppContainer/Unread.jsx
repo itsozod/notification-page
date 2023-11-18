@@ -36,7 +36,8 @@ export const unread = [
     author: {
       img: "./src/assets/images/avatar-rizky-hasanuddin.webp",
       name: "Rizky Hasanudin",
-      text: "sent you a private message",
+      text: "sent you a",
+      privateMsg: "private message",
     },
     private:
       "Hello, thanks for setting up the Chess Club. I've been member for a few weeks now and I'm already having lots of fun and improving my game.",

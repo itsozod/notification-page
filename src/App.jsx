@@ -58,16 +58,24 @@ function App() {
                   src={notification.author.img}
                   alt={notification.author.name}
                 />
-                <p
-                  className="name_container"
-                  onClick={() =>
-                    notification.priveRead
-                      ? (notification.priveRead = false)
-                      : (notification.priveRead = true)
-                  }
-                >
+                <p className="name_container">
                   {notification.author.name} {notification.author.text}{" "}
-                  {notification.message}
+                  {notification.message}{" "}
+                  <span className={notification.isRead ? "noDot" : "redDot"}>
+                  </span>
+                  {notification.author.privateMsg ? (
+                    <a
+                      href="#"
+                      className="privMsg"
+                      onClick={() =>
+                        notification.priveRead
+                          ? (notification.priveRead = false)
+                          : (notification.priveRead = true)
+                      }
+                    >
+                      {notification.author.privateMsg}
+                    </a>
+                  ) : null}
                 </p>
               </div>
               <div className="time_container">
