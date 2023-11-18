@@ -1,7 +1,8 @@
 export const unread = [
   {
     id: 0,
-    text: "Ozod followed you",
+    name: "Mark Webber",
+    text: "reacted to your currect post",
     isRead: false,
   },
   {

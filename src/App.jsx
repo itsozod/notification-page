@@ -31,15 +31,15 @@ function App() {
   return (
     <>
       <header id="header">
-        <h3>
+        <h2>
           Notification{" "}
-          <span>
+          <span className="notify">
             {
               notifications.filter((notification) => !notification.isRead)
                 .length
             }
           </span>
-        </h3>
+        </h2>
         <button className="mark" onClick={() => markAll()}>
           Mark all as read
         </button>
@@ -52,7 +52,7 @@ function App() {
                 className={notification.isRead ? "read" : "unread"}
                 onClick={() => removeUnread(notification.id)}
               >
-                {notification.text}
+                {notification.name} {notification.text}
               </p>
             </div>
           ))}

@@ -12,8 +12,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: brown;
+  background-color: #fff;
   width: 400px;
+  padding: 10px;
+}
+.mark {
+  border: none;
+  background-color: transparent;
+  color: blue;
+  cursor: pointer;
+}
+.notify {
+  background-color: lightskyblue;
+  padding: 1px 8px;
+  border-radius: 10px;
 }
 .unread {
   background-color: lawngreen;
@@ -25,5 +37,3 @@ body {
   margin: 10px;
   cursor: pointer;
 }
-
-
