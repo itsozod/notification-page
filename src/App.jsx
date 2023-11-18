@@ -52,7 +52,7 @@ function App() {
                 className={notification.isRead ? "read" : "unread"}
                 onClick={() => removeUnread(notification.id)}
               >
-                {notification.name} {notification.text}
+                {notification.author.name} {notification.author.text}
               </p>
             </div>
           ))}
