@@ -47,13 +47,35 @@ function App() {
       <main>
         <MainAppContainer>
           {notifications.map((notification) => (
-            <div key={notification.id}>
-              <p
-                className={notification.isRead ? "read" : "unread"}
-                onClick={() => removeUnread(notification.id)}
-              >
-                {notification.author.name} {notification.author.text}
-              </p>
+            <div
+              key={notification.id}
+              className={notification.isRead ? "read" : "unread"}
+              onClick={() => removeUnread(notification.id)}
+            >
+              <div className="container">
+                <img
+                  className="img"
+                  src={notification.author.img}
+                  alt={notification.author.name}
+                />
+                <p
+                  className="name_container"
+                  onClick={() =>
+                    notification.priveRead
+                      ? (notification.priveRead = false)
+                      : (notification.priveRead = true)
+                  }
+                >
+                  {notification.author.name} {notification.author.text}{" "}
+                  {notification.message}
+                </p>
+              </div>
+              <div className="time_container">
+                <p>{notification.time}</p>
+              </div>
+              {notification.priveRead ? (
+                <p className="private">{notification.private}</p>
+              ) : null}
             </div>
           ))}
         </MainAppContainer>
