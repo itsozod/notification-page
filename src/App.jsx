@@ -59,10 +59,18 @@ function App() {
                   alt={notification.author.name}
                 />
                 <p className="name_container">
-                  {notification.author.name} {notification.author.text}{" "}
-                  {notification.message}{" "}
-                  <span className={notification.isRead ? "noDot" : "redDot"}>
-                  </span>
+                  <a href="#" className="blackName">
+                    {notification.author.name}{" "}
+                  </a>
+                  {notification.author.nameBlue && (
+                    <a href="#" className="blueName">
+                      {notification.author.nameBlue}{" "}
+                    </a>
+                  )}
+                  {notification.author.text} {notification.messageBlue && <a href="#" className="messageBlue">{notification.messageBlue}</a>}{" "}
+                  <span
+                    className={notification.isRead ? "noDot" : "redDot"}
+                  ></span>
                   {notification.author.privateMsg ? (
                     <a
                       href="#"

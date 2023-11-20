@@ -74,9 +74,26 @@ body {
   padding: 8px;
   margin: 10px;
   background-color: lightblue;
+  max-width: 480px;
 }
 .privMsg {
   text-decoration: none;
   color: black;
+  font-weight: bold;
+}
+/* names */
+.blackName {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.blueName {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+.messageBlue {
+  text-decoration: none;
+  color: blue;
   font-weight: bold;
 }
