@@ -67,10 +67,12 @@ function App() {
                       {notification.author.nameBlue}{" "}
                     </a>
                   )}
-                  {notification.author.text} {notification.messageBlue && <a href="#" className="messageBlue">{notification.messageBlue}</a>}{" "}
-                  <span
-                    className={notification.isRead ? "noDot" : "redDot"}
-                  ></span>
+                  {notification.author.text}{" "}
+                  {notification.messageBlue && (
+                    <a href="#" className="messageBlue">
+                      {notification.messageBlue}
+                    </a>
+                  )}{" "}
                   {notification.author.privateMsg ? (
                     <a
                       href="#"
@@ -84,6 +86,12 @@ function App() {
                       {notification.author.privateMsg}
                     </a>
                   ) : null}
+                  {notification.imgChess && (
+                    <img className="chessImg" src={notification.imgChess}></img>
+                  )}
+                  <span
+                    className={notification.isRead ? "noDot" : "redDot"}
+                  ></span>
                 </p>
               </div>
               <div className="time_container">

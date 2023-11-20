@@ -60,11 +60,9 @@ body {
 .redDot {
   width: 8px;
   height: 8px;
-  position: absolute;
   background-color: red;
   border-radius: 10px;
   margin-left: 2px;
-  transform: translateY(6px);
 }
 .noDot {
   display: none;
@@ -96,4 +94,10 @@ body {
   text-decoration: none;
   color: blue;
   font-weight: bold;
+}
+.chessImg {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  transform: translateY(10px);
 }

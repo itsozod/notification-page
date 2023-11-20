@@ -43,6 +43,17 @@ export const unread = [
       "Hello, thanks for setting up the Chess Club. I've been member for a few weeks now and I'm already having lots of fun and improving my game.",
     priveRead: false,
     time: "5days ago",
-    isRead: true,
+    isRead: false,
+  },
+  {
+    id: 4,
+    author: {
+      img: "./src/assets/images/avatar-kimberly-smith.webp",
+      name: "Kimberly Smith",
+      text: "commented on your picture",
+    },
+    imgChess: "./src/assets/images/image-chess.webp",
+    time: "1 week ago",
+    isRead: false,
   },
 ];
