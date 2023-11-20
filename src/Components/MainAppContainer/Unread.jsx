@@ -48,12 +48,34 @@ export const unread = [
   {
     id: 4,
     author: {
-      img: "./src/assets/images/avatar-kimberly-smith.webp",
-      name: "Kimberly Smith",
-      text: "commented on your picture",
+      imgChess: "./src/assets/images/avatar-kimberly-smith.webp",
+      nameChess: "Kimberly Smith",
+      textChess: "commented on your picture",
     },
-    imgChess: "./src/assets/images/image-chess.webp",
+    imgChessGirl: "./src/assets/images/image-chess.webp",
     time: "1 week ago",
+    isRead: false,
+  },
+  {
+    id: 5,
+    author: {
+      img: "./src/assets/images/avatar-nathan-peterson.webp",
+      name: "Nathan Peterson",
+      text: "reacted to your recent post",
+    },
+    messageBlack: "5 end-game strategies to increase your win rate",
+    time: "2weeks ago",
+    isRead: false,
+  },
+  {
+    id: 6,
+    author: {
+      img: "./src/assets/images/avatar-anna-kim.webp",
+      name: "Anna Kim",
+      text: "left the group",
+    },
+    messageBlack: "Chess Club",
+    time: "2 weeks ago",
     isRead: false,
   },
 ];

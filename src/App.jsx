@@ -53,46 +53,73 @@ function App() {
               onClick={() => removeUnread(notification.id)}
             >
               <div className="container">
-                <img
-                  className="img"
-                  src={notification.author.img}
-                  alt={notification.author.name}
-                />
-                <p className="name_container">
-                  <a href="#" className="blackName">
-                    {notification.author.name}{" "}
-                  </a>
-                  {notification.author.nameBlue && (
-                    <a href="#" className="blueName">
-                      {notification.author.nameBlue}{" "}
-                    </a>
-                  )}
-                  {notification.author.text}{" "}
-                  {notification.messageBlue && (
-                    <a href="#" className="messageBlue">
-                      {notification.messageBlue}
-                    </a>
-                  )}{" "}
-                  {notification.author.privateMsg ? (
-                    <a
-                      href="#"
-                      className="privMsg"
-                      onClick={() =>
-                        notification.priveRead
-                          ? (notification.priveRead = false)
-                          : (notification.priveRead = true)
-                      }
-                    >
-                      {notification.author.privateMsg}
-                    </a>
-                  ) : null}
-                  {notification.imgChess && (
-                    <img className="chessImg" src={notification.imgChess}></img>
-                  )}
-                  <span
-                    className={notification.isRead ? "noDot" : "redDot"}
-                  ></span>
-                </p>
+                {notification.author.img && (
+                  <>
+                    <img
+                      className="img"
+                      src={notification.author.img}
+                      alt={notification.author.name}
+                    />
+                    <p className="name_container">
+                      <a href="#" className="blackName">
+                        {notification.author.name}
+                      </a>
+                      {notification.author.nameBlue && (
+                        <a href="#" className="blueName">
+                          {notification.author.nameBlue}{" "}
+                        </a>
+                      )}{" "}
+                      {notification.author.text}{" "}
+                      {notification.messageBlue && (
+                        <a href="#" className="messageBlue">
+                          {notification.messageBlue}
+                        </a>
+                      )}{" "}
+                      {notification.messageBlack && (
+                        <a href="#" className="messageBlack">
+                          {notification.messageBlack}
+                        </a>
+                      )}{" "}
+                      {notification.author.privateMsg ? (
+                        <a
+                          href="#"
+                          className="privMsg"
+                          onClick={() =>
+                            notification.priveRead
+                              ? (notification.priveRead = false)
+                              : (notification.priveRead = true)
+                          }
+                        >
+                          {notification.author.privateMsg}
+                        </a>
+                      ) : null}
+                    </p>
+                  </>
+                )}
+
+                {notification.author.imgChess && (
+                  <div className="chessGirlContainer">
+                    <img
+                      className="imgChess"
+                      src={notification.author.imgChess}
+                      alt={notification.author.nameChess}
+                    ></img>
+                    <p className="name_container">
+                      <a className="blackName" href="#">
+                        {notification.author.nameChess}
+                      </a>{" "}
+                      {notification.author.textChess}
+                    </p>
+                    <img
+                      className="chessGirl"
+                      src={notification.imgChessGirl}
+                      alt={notification.author.nameChess}
+                    />
+                  </div>
+                )}
+                <span
+                  className={notification.isRead ? "noDot" : "redDot"}
+                ></span>
               </div>
               <div className="time_container">
                 <p>{notification.time}</p>
