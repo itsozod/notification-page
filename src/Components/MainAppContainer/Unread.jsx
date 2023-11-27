@@ -43,7 +43,7 @@ export const unread = [
       "Hello, thanks for setting up the Chess Club. I've been member for a few weeks now and I'm already having lots of fun and improving my game.",
     priveRead: false,
     time: "5days ago",
-    isRead: false,
+    isRead: true,
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const unread = [
     },
     imgChessGirl: "./src/assets/images/image-chess.webp",
     time: "1 week ago",
-    isRead: false,
+    isRead: true,
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ export const unread = [
     },
     messageBlack: "5 end-game strategies to increase your win rate",
     time: "2weeks ago",
-    isRead: false,
+    isRead: true,
   },
   {
     id: 6,
@@ -76,6 +76,6 @@ export const unread = [
     },
     messageBlack: "Chess Club",
     time: "2 weeks ago",
-    isRead: false,
+    isRead: true,
   },
 ];
