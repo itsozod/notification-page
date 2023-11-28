@@ -5,7 +5,6 @@ import { unread } from "./Components/MainAppContainer/Unread";
 
 function App() {
   const [notifications, setNotifications] = useState(unread);
-  const [showUnread, setShowUnread] = useState(true);
 
   const markAll = () => {
     setNotifications((prevNotification) => {
@@ -16,7 +15,6 @@ function App() {
         return notification;
       });
     });
-    setShowUnread(false);
   };
 
   const removeUnread = (notificationId) => {
@@ -35,14 +33,12 @@ function App() {
       <header id="header">
         <h2>
           Notification{" "}
-          {showUnread && (
-            <span className="notify">
-              {
-                notifications.filter((notification) => !notification.isRead)
-                  .length
-              }
-            </span>
-          )}
+          <span className="notify">
+            {
+              notifications.filter((notification) => !notification.isRead)
+                .length
+            }
+          </span>
         </h2>
         <button className="mark" onClick={() => markAll()}>
           Mark all as read
