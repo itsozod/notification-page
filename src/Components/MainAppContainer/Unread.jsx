@@ -13,7 +13,7 @@ export const unread = [
   {
     id: 1,
     author: {
-      img: "./src/assets/images/avatar-angela-gray.webp",
+      img: "images/avatar-angela-gray.webp",
       nameBlue: "Angela Gray",
       text: "followed you",
     },
@@ -23,7 +23,7 @@ export const unread = [
   {
     id: 2,
     author: {
-      img: "./src/assets/images/avatar-jacob-thompson.webp",
+      img: "images/avatar-jacob-thompson.webp",
       name: "Jacob Thompson",
       text: "has joined your group",
     },
@@ -34,7 +34,7 @@ export const unread = [
   {
     id: 3,
     author: {
-      img: "./src/assets/images/avatar-rizky-hasanuddin.webp",
+      img: "images/avatar-rizky-hasanuddin.webp",
       name: "Rizky Hasanudin",
       text: "sent you a",
       privateMsg: "private message",
@@ -48,18 +48,18 @@ export const unread = [
   {
     id: 4,
     author: {
-      imgChess: "./src/assets/images/avatar-kimberly-smith.webp",
+      imgChess: "images/avatar-kimberly-smith.webp",
       nameChess: "Kimberly Smith",
       textChess: "commented on your picture",
     },
-    imgChessGirl: "./src/assets/images/image-chess.webp",
+    imgChessGirl: "images/image-chess.webp",
     time: "1 week ago",
     isRead: true,
   },
   {
     id: 5,
     author: {
-      img: "./src/assets/images/avatar-nathan-peterson.webp",
+      img: "images/avatar-nathan-peterson.webp",
       name: "Nathan Peterson",
       text: "reacted to your recent post",
     },
@@ -70,7 +70,7 @@ export const unread = [
   {
     id: 6,
     author: {
-      img: "./src/assets/images/avatar-anna-kim.webp",
+      img: "images/avatar-anna-kim.webp",
       name: "Anna Kim",
       text: "left the group",
     },
