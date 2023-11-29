@@ -2,7 +2,7 @@ export const unread = [
   {
     id: 0,
     author: {
-      img: "/images/avatar-mark-webber.webp",
+      img: "./images/avatar-mark-webber.webp",
       name: "Mark Webber",
       text: "reacted to your currect post",
     },
